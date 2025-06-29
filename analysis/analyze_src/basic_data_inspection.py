@@ -58,21 +58,3 @@ class DataInspector:
         """
         self._strategy.inspect(df)
         
-
-
-if __name__ == "__main__":
-    # Example usage
-    data = {
-        'A': [1, 2, 3, 4],
-        'B': ['a', 'b', 'c', 'd'],
-        'C': [1.1, 2.2, 3.3, 4.4]
-    }
-    df = pd.DataFrame(data)
-
-    # Using DataTypesInspector
-    inspector = DataInspector(DataTypesInspector())
-    inspector.execute_inspection(df)
-
-    # Using SummaryStatisticsInspectionStartegy
-    inspector.set_strategy(SummaryStatisticsInspectionStartegy())
-    inspector.execute_inspection(df)
